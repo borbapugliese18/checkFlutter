@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:movie_app/common/utils.dart';
 import 'package:movie_app/models/movie_model.dart';
 
+import '../../movie_detail/movie_detail_page.dart';
+
 class TopRatedMovie extends StatelessWidget {
   const TopRatedMovie({
     super.key,
@@ -13,7 +15,14 @@ class TopRatedMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => MovieDetailPage(
+                movieId: movie.id,
+              )));
+        },
+    child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,6 +86,6 @@ class TopRatedMovie extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }

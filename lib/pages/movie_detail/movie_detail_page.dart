@@ -138,7 +138,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Text(
-                                    "More like this",
+                                    "Você pode gostar",
                                     maxLines: 6,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(

@@ -45,8 +45,8 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     final searchTitle = searchController.text.isEmpty
-        ? 'Top Searchs'
-        : 'Search Result for ${searchController.text}';
+        ? 'Mais pesquisados'
+        : 'Resultados para ${searchController.text}';
 
     return Scaffold(
       body: SafeArea(
