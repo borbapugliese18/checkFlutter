@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:movie_app/pages/home/home_page.dart';
 
+import '../../widgets/bottom_nav_bar.dart';
+
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -14,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Navigate to the home screen after a delay
     Future.delayed(Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => HomePage()),//ab
+        MaterialPageRoute(builder: (context) => BottomNavBar()),//ab
       );
     });
   }
